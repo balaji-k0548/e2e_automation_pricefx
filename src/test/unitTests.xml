@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Code Coverage Test Suite" >
+    <test name="Code Coverage Tests" >
+        <classes>
+            <class name="com.syscolab.qe.core.unitTests.UI.playwrightTests.BaseBrowserTests"/>
+            <class name="com.syscolab.qe.core.unitTests.UI.playwrightTests.SyscoLabPWTests"/>
+            <class name="com.syscolab.qe.core.unitTests.UI.playwrightTests.SyscoLabPWFrameTests"/>
+
+<!--            <class name="com.syscolab.qe.core.unitTests.UI.playwrightTests.SyscoLabPWListenerTests"></class>-->
+
+            <class name="com.syscolab.qe.core.unitTests.UI.sutapUITests.SyscoLabUITests"/>
+            <class name="com.syscolab.qe.core.unitTests.UI.sutapUITests.SyscoLabCapabilityUtilTests"/>
+            <class name="com.syscolab.qe.core.unitTests.UI.sutapUITests.SyscoLabDriverTests"/>
+            <class name="com.syscolab.qe.core.unitTests.UI.sutapUITests.SyscoLabWUITests"/>
+
+        </classes>
+    </test>
+</suite>

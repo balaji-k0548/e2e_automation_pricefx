@@ -1,0 +1,103 @@
+{
+  "project": "payroll_api",
+  "endpoints": [
+    {
+      "name": "Delete user shift",
+      "description": "Add new user shift from timeSheets.",
+      "url": "/payroll-api/accounts/{accountId}/shifts",
+      "preconditions" : ["Do auth", "Do capture"],
+      "request": {
+        "userId": 0,
+        "paymentType": "string",
+        "declaredTips": 0,
+        "startTime": 0,
+        "endTime": 0,
+        "jobAssignmentId": 0,
+        "updatedBy": "string",
+        "shiftId": "string",
+        "hourlyRate": 0,
+        "clockInOuts": [
+          {
+            "id": "string",
+            "type": "string",
+            "inTime": 0,
+            "outTime": 0,
+            "isActive": true
+          }
+        ]
+      },
+      "responses": [
+        {
+          "success": {
+            "data": {
+              "shiftId": "9758d390-33a6-4642-8476-34a0f85529fe",
+              "accountId": "10398266",
+              "userId": 2134738,
+              "jobAssignmentId": 1,
+              "paidHours": 18.15,
+              "isActive": true,
+              "declaredTips": 13.12,
+              "startTime": 1483065034000,
+              "endTime": 1483130412000,
+              "paymentType": "HOURLY",
+              "hourlyRate": 0,
+              "shiftEndType": "FORCE",
+              "clockInOuts": [
+                {
+                  "id": "7fe36af0-5ca1-11e7-8316-79b230cab84a",
+                  "type": "REGULAR",
+                  "inTime": 1483065034000,
+                  "outTime": 1483130412000,
+                  "totalMinutes": 1089,
+                  "unpaidMinutes": 0,
+                  "isActive": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "error": {
+            "code": 801007,
+            "message": "Request parameter/value is invalid. \"type\" must be a string",
+            "additionalInfo": null
+          }
+        }
+      ],
+      "error_codes": [
+        {
+          "error_code": 801001,
+          "description": "Request parameter/value is invalid"
+        },
+        {
+          "error_code": 801007,
+          "description": "Invalid Request body parameter found"
+        },
+        {
+          "error_code": 801009,
+          "description": "Overlapping shifts found"
+        },
+        {
+          "error_code": 801010,
+          "description": "Overlapping clockInOuts found"
+        },
+        {
+          "error_code": 801011,
+          "description": "Valid setting not found for current operation"
+        },
+        {
+          "error_code": 801026,
+          "description": "Shift already exists"
+        },
+        {
+          "error_code": 801032,
+          "description": "Shift start/end and Clock in/out times should be less than or equal to current time"
+        },
+        {
+          "error_code": 801200,
+          "description": "Account not found"
+        }
+      ]
+    }
+  ]
+}

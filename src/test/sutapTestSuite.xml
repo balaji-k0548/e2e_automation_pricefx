@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite for SUTAP Tests" >
+    <suite-files>
+        <suite-file path="unitTests.xml"></suite-file>
+        <suite-file path="integrationTests.xml"></suite-file>
+    </suite-files>
+
+</suite>
